@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Pertemuan 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #333;
+        }
+
+        /* === Tabel === */
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #666;
+            color: white;
+        }
+
+        /* === Form === */
+        .form-container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            color: green;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+            width: 100%;
+            background: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: darkgreen;
+        }
+
+        /* === Frame Layout === */
+        header,
+        nav,
+        footer {
+            background-color: #4da6ff;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            min-height: 300px;
+            margin-top: 10px;
+        }
+
+        aside {
+            background-color: #66b3ff;
+            flex: 1;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        main {
+            background-color: #3399ff;
+            flex: 3;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1a8cff;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tugas Pertemuan 3</h1>
+
+    <!-- Bagian Tabel -->
+    <h2>Tabel Daftar Nilai Mahasiswa</h2>
+    <table>
+        <tr>
+            <th rowspan="2">No</th>
+            <th rowspan="2">NRP</th>
+            <th rowspan="2">Nama</th>
+            <th colspan="2">Nilai</th>
+        </tr>
+        <tr>
+            <th>ETS</th>
+            <th>EAS</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>9275401836</td>
+            <td>Andi Pratama</td>
+            <td>99</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>5829174306</td>
+            <td>Ayu Lestari</td>
+            <td>95</td>
+            <td>95</td>
+        </tr>
+    </table>
+
+    <!-- Bagian Form -->
+    <h2>Registration Form</h2>
+    <div class="form-container">
+        <h3>Registration Form</h3>
+        <form action="#" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="********" required>
+
+            <label for="repassword">Re-type Password:</label>
+            <input type="password" id="repassword" name="repassword" placeholder="********" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" placeholder="+628123456789" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bagian Frame Layout -->
+    <h2>Layout Frame</h2>
+    <header>
+        🚀 Dashboard Mahasiswa
+    </header>
+
+    <nav>
+        Menu Navigasi Utama
+    </nav>
+
+    <div class="container">
+        <aside>
+            <h3>📂 Menu</h3>
+            <ul style="list-style:none; padding:0; text-align:left;">
+                <li>🏠 Home</li>
+                <li>📊 Nilai</li>
+                <li>👤 Profil</li>
+                <li>⚙️ Pengaturan</li>
+                <li>🚪 Logout</li>
+            </ul>
+        </aside>
+
+        <main>
+            <h3>Selamat Datang!</h3>
+            <p>Ini adalah halaman dashboard mini</p>
+
+            <h4>Ringkasan Nilai</h4>
+            <table style="margin:auto; border-collapse:collapse; width:80%;">
+                <tr>
+                    <th style="border:1px solid white; padding:8px;">Mata Kuliah</th>
+                    <th style="border:1px solid white; padding:8px;">Nilai</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid white; padding:8px;">Pemrograman Web</td>
+                    <td style="border:1px solid white; padding:8px;">A</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid white; padding:8px;">Basis Data</td>
+                    <td style="border:1px solid white; padding:8px;">A</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+
+    <footer>
+        © 2025 Dashboard Mahasiswa
+    </footer>
